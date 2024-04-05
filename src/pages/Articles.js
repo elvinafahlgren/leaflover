@@ -1,17 +1,14 @@
 import React from 'react';
+import '../styles/Articles.css';
+import articles from '../data/articlesMock';
 
 const Articles = () => {
-  // Placeholder for article content. You might want to fetch this from an API or define an array of articles.
-  const articles = [
-    { title: 'Watering Your Plants', content: 'Make sure to water your plants regularly...' },
-    // Add more articles here
-  ];
-
   return (
-    <div>
+    <div className="articles-container">
       {articles.map((article, index) => (
-        <div key={index}>
-          <h3>{article.title}</h3>
+        <div key={index} className="article">
+          <h2>{article.title}</h2>
+          {article.imageUrl && <img src={articles.imageUrl} alt={articles.title} />}
           <p>{article.content}</p>
         </div>
       ))}

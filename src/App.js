@@ -1,29 +1,22 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import AddPlant from './pages/AddPlant';
-import PlantDetails from './pages/PlantDetails';
+import Home from'./pages/Home';
+import DailyTasks from './pages/DailyTasks';
 import Articles from './pages/Articles';
-import mockPlants from './data/mockPlants';
+import Profile from './pages/Profile';
+import profileMock from './data/profileMock';
 import './App.css';
 
 function App() {
-  const [plants, setPlants] = useState(mockPlants);
-
-  const addPlant = (plant) => {
-    setPlants([...plants, plant]);
-  };
+  const [currentPage, setCurrentPage] = useState('home'); 
 
   return (
     <div className="App">
-      <div>
-        <Navbar/>
-        <h2>Your Plants</h2>
-        {plants.map((plant, index) => (
-          <PlantDetails key={index} plant={plant} />
-        ))}
-      </div>
-      <AddPlant onAddPlant={addPlant} />
-      <Articles />
+      <Navbar setCurrentPage={setCurrentPage} />
+      {currentPage === 'home' && <Home user={profileMock.user} />}
+      {currentPage === 'dailyTasks' && <DailyTasks />}
+      {currentPage === 'articles' && <Articles />}
+      {currentPage === 'profile' && <Profile user={profileMock.user} plants={profileMock.plants}/>}
     </div>
   );
 }

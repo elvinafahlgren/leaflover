@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({ setCurrentPage }) => {
   return (
     <nav>
       <h1>LeafLover</h1>
       <div>
-        <a href="https://example.com/">Home</a>
-        <a href="https://example.com/add-plant">Add Plant</a>
-        <a href="https://example.com/articles">Articles</a>
+        <button onClick={() => setCurrentPage('home')}>Home</button>
+        <button onClick={() => setCurrentPage('dailyTasks')}>Daily Tasks</button>
+        <button onClick={() => setCurrentPage('articles')}>Articles</button>
+        <button onClick={() => setCurrentPage('profile')}>Profile</button>
       </div>
     </nav>
   );
