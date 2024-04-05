@@ -1,20 +1,19 @@
 .daily-tasks ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .daily-tasks li {
+}
+
+.daily-tasks li {
     cursor: pointer;
     padding: 8px;
     border-bottom: 1px solid #ccc;
-  }
-  
-  .daily-tasks li:last-child {
+}
+
+.daily-tasks li:last-child {
     border-bottom: none;
-  }
-  
-  .daily-tasks li.completed {
+}
+
+.daily-tasks li.completed {
     text-decoration: line-through;
     color: #999;
-  }
-  
+}

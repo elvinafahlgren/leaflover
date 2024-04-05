@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Home from'./pages/Home';
+import Home from './pages/Home';
 import DailyTasks from './pages/DailyTasks';
 import Articles from './pages/Articles';
 import Profile from './pages/Profile';
@@ -8,7 +8,7 @@ import profileMock from './data/profileMock';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home'); 
+  const [currentPage, setCurrentPage] = useState('home');
 
   return (
     <div className="App">
@@ -16,7 +16,7 @@ function App() {
       {currentPage === 'home' && <Home user={profileMock.user} />}
       {currentPage === 'dailyTasks' && <DailyTasks />}
       {currentPage === 'articles' && <Articles />}
-      {currentPage === 'profile' && <Profile user={profileMock.user} plants={profileMock.plants}/>}
+      {currentPage === 'profile' && <Profile user={profileMock.user} plants={profileMock.plants} />}
     </div>
   );
 }

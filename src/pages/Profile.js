@@ -15,7 +15,7 @@ const Profile = ({ user, plants }) => {
     const addPlant = (plant) => {
         setUserPlants([...userPlants, plant]);
     };
-    
+
     return (
         <div className="profile">
             <h2>User Profile</h2>
