@@ -1,0 +1,28 @@
+.plant-details {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .plant-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .plant-details h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .plant-details p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
