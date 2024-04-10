@@ -6,6 +6,7 @@ const DailyTasks = () => {
         { id: 1, text: 'Water the indoor plants', completed: false },
         { id: 2, text: 'Check plant soil moisture', completed: false },
         { id: 3, text: 'Prune dead leaves', completed: false },
+        { id: 4, text: 'Water the palm outside', completed: false },
         // Add more tasks as needed
     ]);
 
