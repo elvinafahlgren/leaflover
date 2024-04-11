@@ -15,7 +15,7 @@ const Articles = () => {
         { url: 'https://source.unsplash.com/800x600/?nature', title: 'Natural Elegance' }
       ]
     },
-    {
+    { 
       id: 2,
       title: 'Introduction to Plant Hormones',
       videos: [
