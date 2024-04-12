@@ -14,6 +14,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.articles-page h1{
+    margin-bottom: 15px;
+}
+
 .article h2 {
     margin-bottom: 15px;
     color: #286E34;
@@ -85,7 +89,7 @@
     transition: filter 0.5s ease; /* we can put the duration as needed */
   }
   
-  .darken-on-hover:hover {
+.darken-on-hover:hover {
     filter: brightness(80%);
   }
   

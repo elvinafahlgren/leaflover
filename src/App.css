@@ -7,11 +7,8 @@
 }
 
 
-
-/* Navbar Styles */
 nav {
   background-color: #286E34;
-  /* A nice shade of green */
   padding: 1rem;
   display: flex;
   justify-content: space-between;
