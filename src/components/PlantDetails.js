@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/PlantDetails.css'; // Adjust the path based on your project structure
+import '../styles/Plants.css'; 
 
 const PlantDetails = ({ plant }) => {
   return (

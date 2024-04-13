@@ -1,15 +1,183 @@
 .profile {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* center children horizontally */
+    align-items: center;
+    background-color: #2C2F33;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.user-info,
-.user-plants {
+.profile-header {
+    text-align: center;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    /* circular image */
+    border-radius: 50%;
+    /* center image, add margin below */
+    margin: 0 auto 20px;
+    border: 3px solid #ffffff;
+}
+
+.profile-name {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.profile-email {
+    font-size: 18px;
+    color: #BBBBBB;
     margin-bottom: 20px;
 }
 
-.user-info h3,
-.user-plants h3 {
+/* email link */
+.profile-email a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* email link hover */
+.profile-email a:hover {
+    color: #ffffff;
+}
+
+.profile-edit-button,
+.invite-button {
+    background-color: #286E34;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.profile-edit-button:hover,
+.invite-button:hover {
+    background-color: #245d2e;
+}
+
+.invite-button {
+    width: fit-content;
+}
+
+.notifications-container,
+.invite-container {
+    background-color: #222;
+    border-radius: 20px;
+    /* padding inside containers */
+    padding: 15px 20px;
+    display: flex;
+    /* align items vertically */
+    align-items: center;
+    /* Space between the text and the toggle/button */
+    justify-content: space-between;
+    /* margin around the containers */
+    margin: 20px 0;
+    /* width relative to the parent container */
+    width: 90%;
+}
+
+.notifications-container {
     margin-bottom: 10px;
 }
 
-/* Add more styling as needed */
+.notifications-container span,
+.invite-container span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.invite-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.notifications-text,
+.notifications-text {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #245d2e;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #245d2e;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.user-plants {
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.add-plant-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.log-out-button {
+    color: #BBBBBB;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.log-out-button:hover {
+    color: #ffffff;
+}

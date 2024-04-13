@@ -1,51 +1,49 @@
-/* Styling for the plant list container */
 .plant-list {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
-  /* Adds space between plant items */
+  /* distribute items evenly */
+  justify-content: space-around;
+  gap: 20px;
 }
 
-/* Styling for each individual plant item */
-.plant-item {
-  border: 2px solid #4CAF50;
-  /* A nice shade of green to match your Navbar */
+.plant-details {
+  background-color: #fff;
   border-radius: 8px;
-  padding: 1rem;
-  width: 200px;
-  /* Or any suitable fixed width */
-  text-align: center;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: calc(100% - 20px);
+  max-width: 180px;
+  height: 312px;
+  margin: 10px;
+  display: flex;
+  /* stack flex items vertically */
+  flex-direction: column;
+  /* center items horizontally */
+  align-items: center;
 }
 
-.plant-item:hover {
-  transform: scale(1.05);
-  /* Slightly enlarge plant items on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.plant-item h3 {
-  margin: 0.5rem 0;
-  /* Adjusts spacing around the plant name */
-  color: #333;
-}
-
-.plant-item p {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  /* Slightly smaller font for plant details */
-  color: #666;
-  /* Darker grey text for readability */
-}
-
-.plant-item img {
-  max-width: 100%;
-  /* Ensures images don't overflow their containers */
+.plant-details img {
+  width: 60%;
+  max-width: 120px;
   height: auto;
-  border-radius: 4px;
-  /* Softens the edges of the images */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.plant-details h2 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.plant-details p {
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 4px;
 }

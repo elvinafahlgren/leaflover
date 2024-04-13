@@ -1,10 +1,9 @@
 import React from 'react';
-import PlantDetails from './PlantDetails'; // Adjust the path based on your project structure
+import PlantDetails from './PlantDetails';
 
 const Plants = ({ plants }) => {
   return (
-    <div>
-      <h2>Your Plants</h2>
+    <div className='plant-list'>
       {plants.map((plant, index) => (
         <PlantDetails key={index} plant={plant} />
       ))}
