@@ -14,8 +14,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.articles-page h1{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .article h2 {
     margin-bottom: 15px;
+    color: #286E34;
 }
 
 .article img {
@@ -26,5 +32,70 @@
 }
 
 .article p {
+    color: black;
     line-height: 1.6;
 }
+
+.article-link {
+    text-decoration: none;
+    color: #286E34;
+  }
+  
+
+/* Additional styles for video container */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-container h3 {
+    color: black;
+}
+
+.video {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Additional styles for photo carousel */
+.photo-carousel {
+    margin-top: 20px;
+}
+
+.photo-carousel .carousel {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.photo-carousel .carousel .slide {
+    background-color: transparent;
+}
+
+.photo-carousel .carousel .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-carousel .carousel .legend {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.darken-on-hover {
+    transition: filter 0.5s ease; /* we can put the duration as needed */
+  }
+  
+.darken-on-hover:hover {
+    filter: brightness(80%);
+  }
+  
