@@ -3,7 +3,8 @@ const profileMock = {
         name: 'Jane Doe',
         email: 'jane.doe@example.com',
         location: 'Green City, Earth',
-        bio: 'Plant enthusiast and nature lover.'
+        bio: 'Plant enthusiast and nature lover.',
+        imageUrl: 'https://live.staticflickr.com/3066/2825871499_0d4d130be1_z.jpg',
     },
     plants: [
         {

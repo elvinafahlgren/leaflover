@@ -7,29 +7,58 @@ const Profile = ({ user, plants }) => {
     // State to manage the user's plants, initially set to the plants prop
     const [userPlants, setUserPlants] = useState([]);
 
-    // Use useEffect to set the initial plants from props
+    // useEffect to set the initial plants from props
     useEffect(() => {
         setUserPlants(plants);
-    }, [plants]); // Dependency array ensures this runs only when plants prop changes
+    }, [plants]); // ensures this runs only when plants prop changes
 
+    // add plant
     const addPlant = (plant) => {
         setUserPlants([...userPlants, plant]);
     };
 
+    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+
     return (
         <div className="profile">
-            <h2>User Profile</h2>
-            <div className="user-info">
-                <h3>{user.name}</h3>
-                <p>Email: {user.email}</p>
-                <p>{user.bio}</p>
-                {/* You can add more user details here */}
+            <div className="profile-header">
+                <img src={user.imageUrl} alt={`${user.name}`} className="profile-image" />
+                <h1 className="profile-name">{user.name}</h1>
+                <p className="profile-email">
+                    Email: <a href={`mailto:${user.email}`}>{user.email}</a>
+                </p>
+                <p className="profile-bio">{user.bio}</p>
+                <button className="profile-edit-button">Edit profile</button>
+
+                <div className="notifications-container">
+                    <span className="notifications-text">Turn on Notifications</span>
+                    <label className="switch">
+                        <input
+                            type="checkbox"
+                            id="notifications-checkbox"
+                            checked={notificationsEnabled}
+                            onChange={() => setNotificationsEnabled(!notificationsEnabled)}
+                        />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+
+                <div className="invite-container">
+                    <span className="notifications-text">Invite People</span>
+                    <button className="invite-button">Invite</button>
+                </div>
             </div>
-            <div className="user-plants">
-                <h3>Your Plants</h3>
-                <Plants plants={userPlants} /> {/* Use the updated state variable here */}
+
+            <div className="profile-content">
+                <div className="user-plants">
+                    <h3 className='user-plants-title'>Your Plants</h3>
+                    <Plants plants={userPlants} />
+                </div>
+                <div className="add-plant-section">
+                    <AddPlant onAddPlant={addPlant} />
+                </div>
+                <button className='log-out-button'> Log out</button>
             </div>
-            <AddPlant onAddPlant={addPlant} />
         </div>
     );
 };
