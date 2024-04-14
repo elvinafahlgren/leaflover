@@ -1,19 +1,126 @@
+body {
+    background-color: #1A1A1A; /* Fond noir pour toute la page */
+    color: #fff; /* Couleur du texte blanc */
+}
+
+.daily-tasks {
+    position: relative;
+    min-height: 100vh; /* Utilisation de la hauteur minimale de la vue pour que le conteneur occupe toute la hauteur de la page */
+}
+
+.daily-tasks h2 {
+    color: #fff; /* Couleur du texte blanc pour le titre "Daily Tasks" */
+}
+
 .daily-tasks ul {
     list-style-type: none;
     padding: 0;
 }
 
 .daily-tasks li {
+    color: #fff;
+    display: flex; /* Utilisation de flexbox */
+    justify-content: space-between; /* Alignement des éléments sur toute la ligne */
+    align-items: center;
     cursor: pointer;
     padding: 8px;
-    border-bottom: 1px solid #ccc;
-}
-
-.daily-tasks li:last-child {
-    border-bottom: none;
+    border-radius: 8px; /* Ajout de bords arrondis */
+    border: 2px solid #286E34; /* Changement de la bordure en une ligne grise */
+    margin-bottom: 8px; /* Espacement entre les tâches */
+    background-color: #f2f2f229;
+    transition: opacity 0.3s; /* Ajout d'une transition pour l'opacité */
 }
 
 .daily-tasks li.completed {
-    text-decoration: line-through;
-    color: #999;
+    opacity: 0.5; /* Rendre la tâche complétée transparente */
 }
+
+.daily-tasks li.completed .task-text {
+    text-decoration: line-through; /* Barrer le texte de la tâche complétée */
+}
+
+.daily-tasks li:last-child {
+    margin-bottom: 0;
+    border-bottom: 2px solid #286E34; /* Ajout de la bordure en bas pour la dernière tâche */
+}
+
+.done-btn {
+    background-color: #286E34;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.done-btn:hover {
+    background-color: #1E4D26;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.task-text {
+    flex: 1; /* Pour étirer le texte de la tâche autant que possible */
+    text-align: center; /* Pour centrer le texte horizontalement */
+    margin-right: 10px; /* Pour créer un espace entre le texte de la tâche et le bouton "Done" */
+    color: white; /* Couleur du texte en rouge */
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px; /* Espacement du bas de la page */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Centrer horizontalement */
+}
+.add-task input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    background-color: #f2f2f229;
+    color: #fff;
+    font-weight: bold;
+}
+
+.add-task-btn {
+    background-color: #286E34;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+    background-color: #1E4D26;
+}
+
+.search-task {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #286E34;
+    margin-bottom: 10px;
+    background-color: #f2f2f229;
+    color: #fff;
+    font-weight: bold;
+}
+
+
