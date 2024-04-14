@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/DailyTasks.css'; // Assume you'll create this CSS file for styling
+import '../styles/DailyTasks.css';
 
 const DailyTasks = () => {
     const [tasks, setTasks] = useState([
