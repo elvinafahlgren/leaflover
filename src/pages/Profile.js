@@ -51,7 +51,7 @@ const Profile = ({ user, plants }) => {
 
             <div className="profile-content">
                 <div className="user-plants">
-                    <h3>Your Plants</h3>
+                    <h3 className='user-plants-title'>Your Plants</h3>
                     <Plants plants={userPlants} />
                 </div>
                 <div className="add-plant-section">

@@ -53,7 +53,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adding a subtle shadow for depth */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 h3 {
@@ -63,8 +63,8 @@ h3 {
 }
 
 .task-progress-bar {
-    background-color: #555; /* Darker shade for the incomplete part of the bar */
+    background-color: #555;
     height: 20px;
     border-radius: 10px;
-    position: relative; /* Required for the inner bar to be positioned absolutely */
+    position: relative;
 }

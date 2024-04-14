@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../styles/Home.css'; // Assuming the CSS is in a file named Home.css
+import '../styles/Home.css';
 
 const Home = ({ user }) => {
-    const [tasks, setTasks] = useState({
+    const [tasks] = useState({
         dailyProgress: 76,
         watering: { new: 5, total: 15 },
         fertilizing: { new: 3, total: 18 },
