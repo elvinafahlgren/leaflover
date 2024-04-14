@@ -1,5 +1,9 @@
-# Running the app
+# LeafLover Application
 
-## Necessary packages
+This is a small web application, made exclusively for the WebInt course at EURECOM.
 
-'react-responsive-carousel'
+## Running the app
+
+### Necessary packages
+
+- react-responsive-carousel
