@@ -12,7 +12,7 @@ const Home = ({ user }) => {
 
     return (
         <div className="home">
-            <h1>Hello, <br/>{user.name}!</h1>
+            <h1>HELLO, <br/>{user.name}!</h1>
             <h2 className="subheader">Daily Tasks</h2>
             <div className="total-progress">
                 <div className="progress-bar" style={{ width: `${tasks.dailyProgress}%` }}>

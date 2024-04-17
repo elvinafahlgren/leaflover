@@ -1,0 +1,39 @@
+nav {
+    background-color: #286E34; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar-buttons {
+    display: flex;
+}
+
+.navbar-buttons button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 16px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3%; /* Rounded corners */
+
+}
+
+.navbar-buttons button:hover {
+    background-color: white;
+    color: #286E34;
+}
+
+.navbar-buttons button:focus {
+    background-color: white;
+    color: #286E34;
+}

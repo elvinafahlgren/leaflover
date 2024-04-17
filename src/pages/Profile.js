@@ -4,20 +4,25 @@ import AddPlant from '../components/AddPlant';
 import '../styles/Profile.css';
 
 const Profile = ({ user, plants }) => {
-    // State to manage the user's plants, initially set to the plants prop
     const [userPlants, setUserPlants] = useState([]);
+    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
 
-    // useEffect to set the initial plants from props
+    // useEffect to set the plants
     useEffect(() => {
-        setUserPlants(plants);
+        const localPlants = localStorage.getItem('userPlants');
+        if (localPlants) {
+            setUserPlants(JSON.parse(localPlants));
+        } else {
+            localStorage.setItem('userPlants', JSON.stringify(plants));
+        }
     }, [plants]); // ensures this runs only when plants prop changes
 
     // add plant
     const addPlant = (plant) => {
-        setUserPlants([...userPlants, plant]);
+        const updatedPlants = [...userPlants, plant];
+        setUserPlants(updatedPlants);
+        localStorage.setItem('userPlants', JSON.stringify(updatedPlants));
     };
-
-    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
 
     return (
         <div className="profile">
@@ -50,13 +55,9 @@ const Profile = ({ user, plants }) => {
             </div>
 
             <div className="profile-content">
-                <div className="user-plants">
-                    <h3 className='user-plants-title'>Your Plants</h3>
-                    <Plants plants={userPlants} />
-                </div>
-                <div className="add-plant-section">
-                    <AddPlant onAddPlant={addPlant} />
-                </div>
+                <h3 className='user-plants-title'>Your Plants</h3>
+                <Plants plants={userPlants}  />
+                <AddPlant onAddPlant={addPlant} />
                 <button className='log-out-button'> Log out</button>
             </div>
         </div>

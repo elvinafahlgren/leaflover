@@ -8,6 +8,8 @@ import profileMock from './data/profileMock';
 import './App.css';
 
 function App() {
+  // run for clear the local storage
+  //localStorage.clear();
   const [currentPage, setCurrentPage] = useState('home');
 
   return (

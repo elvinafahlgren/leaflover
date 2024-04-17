@@ -45,7 +45,7 @@ const DailyTasks = () => {
     
    return (
         <div className="daily-tasks">
-            <h2>Daily Tasks</h2>
+            <h2>DAILY TASKS</h2>
             <input
                 type="text"
                 placeholder="Search tasks..."
